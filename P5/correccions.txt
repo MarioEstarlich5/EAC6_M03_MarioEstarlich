@@ -1,0 +1,59 @@
+# Correccions realitzades després de l'anàlisi amb pylint
+
+## Fitxer: generardataset.py
+
+1. **Eliminació d'espais en blanc innecessaris**:
+   Diverses línies contenien espais en blanc al final, detectats com `trailing-whitespace`. S'han eliminat aquests espais per complir amb l'estàndard PEP8 i les recomanacions de pylint.
+
+2. **Afecció de línia final**:
+   El fitxer no contenia una línia en blanc al final, la qual cosa generava l'error `missing-final-newline`. S'ha afegit una línia en blanc al final per complir amb les bones pràctiques de formatació.
+
+3. **Afecció de docstrings**:
+   Les funcions i el mòdul no tenien descripcions (`docstrings`). S'han afegit docstrings en format estàndard a totes les funcions i al mòdul per millorar la documentació del codi i complir amb pylint.
+
+4. **Canvi de noms de constants a majúscules**:
+   Les constants com `mu_p_be`, `sigma` i altres no seguien l'estàndard de noms per a constants (majúscules). S'han canviat aquests noms a `MU_P_BE`, `SIGMA`, etc., per complir amb les recomanacions de PEP8.
+
+5. **Canvi de noms de paràmetres i variables**:
+   - El paràmetre `num` s'ha renombrat a `num_rows` per ser més descriptiu.
+   - El paràmetre `dicc` s'ha renombrat a `config_dict` per clarificar la seva funció.
+   - La variable interna `dataset` es redefinia en diferents llocs, generant l'error `redefined-outer-name`. Per evitar conflictes, aquesta variable interna s'ha renombrat a `data`.
+
+6. **Divisió de línies llargues**:
+   Algunes línies del codi superaven el límit recomanat de caràcters (100). S'han dividit aquestes línies en diverses línies més curtes per complir amb les bones pràctiques de llegibilitat.
+
+---
+
+## Resultat després de les correccions:
+Després d'implementar aquestes correccions, el codi ha obtingut un puntatge de **10/10** en l'anàlisi de pylint. Aquest resultat reflecteix una millora significativa en la qualitat i l'estil del codi.
+
+
+# Correccions realitzades després de l'anàlisi amb pylint
+
+## Fitxer: clustersciclistes.py
+
+1. **Eliminació d'importacions no utilitzades**:
+   Les funcions `homogeneity_score`, `completeness_score` i `v_measure_score` de la llibreria `sklearn.metrics.cluster` no s'estaven utilitzant en el codi. Aquestes importacions innecessàries s'han eliminat per millorar la claredat i l'eficiència del codi.
+
+2. **Canvi de nom de variables redefinides**:
+   La variable `true_labels` es redefinia dins d'una funció, causant conflictes amb l'abast global. Aquesta variable s'ha renombrat a `labels_true` per evitar la redefinició i seguir les bones pràctiques de programació.
+
+3. **Correcció de línies massa llargues**:
+   A la línia 131, el codi superava el límit de 100 caràcters recomanat per pylint. S'ha dividit aquesta línia en diverses línies més curtes per complir amb l'estàndard.
+
+4. **Eliminació d'espais en blanc innecessaris**:
+   S'han eliminat els espais en blanc al final de les línies 146, 149 i 159 per complir amb les recomanacions de format.
+
+5. **Substitució de `exit()` per `sys.exit()`**:
+   La funció `exit()` s'ha substituït per `sys.exit()` per seguir les recomanacions de pylint i millorar la gestió de sortides del programa. Aquesta substitució assegura un comportament més consistent en entorns de producció.
+
+6. **Canvi de noms a snake_case**:
+   La funció `EDA` s'ha renombrat a `exploratory_data_analysis` per complir amb l'estàndard `snake_case` requerit per pylint.
+
+7. **Canvi de noms de constants a majúscules**:
+   La constant `path_dataset` s'ha canviat a `PATH_DATASET` per seguir l'estàndard de nomenclatura de constants (majúscules).
+
+---
+
+## Resultat després de les correccions:
+Després d'implementar aquestes correccions, el codi ha obtingut un puntatge de **9.85/10** en l'anàlisi de pylint. Aquest resultat reflecteix una millora significativa en la qualitat i l'estil del codi.

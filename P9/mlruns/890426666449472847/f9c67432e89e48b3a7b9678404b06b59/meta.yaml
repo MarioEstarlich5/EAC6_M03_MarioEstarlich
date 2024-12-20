@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mario/OneDrive/Escritorio/EAC6_M03_MarioEstarlich/P9/mlruns/890426666449472847/f9c67432e89e48b3a7b9678404b06b59/artifacts
+end_time: 1734726742910
+entry_point_name: ''
+experiment_id: '890426666449472847'
+lifecycle_stage: active
+run_id: f9c67432e89e48b3a7b9678404b06b59
+run_name: sneaky-snail-222
+run_uuid: f9c67432e89e48b3a7b9678404b06b59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734726742851
+status: 3
+tags: []
+user_id: mario

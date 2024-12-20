@@ -1,0 +1,54 @@
+Flux de treball per exportar el projecte a GitHub
+1. Crear un repositori a GitHub
+Aneu a https://github.com i creeu un nou repositori (nom, descripció, visibilitat).
+2. Inicialitzar el repositori local
+A la carpeta del projecte, obre el terminal i executa:
+
+bash
+Copia el codi
+git init
+3. Afegir els arxius al repositori Git
+Per afegir tots els arxius del projecte:
+
+bash
+Copia el codi
+git add .
+4. Fer el primer commit
+Per enregistrar els canvis:
+
+bash
+Copia el codi
+git commit -m "Primer commit"
+5. Connectar el repositori local amb GitHub
+Afegeix el repositori remot:
+
+bash
+Copia el codi
+git remote add origin https://github.com/usuari/nombre-del-repositori.git
+6. Pujar el projecte a GitHub
+El primer push per pujar el projecte:
+
+bash
+Copia el codi
+git push -u origin master
+7. Treballar amb canvis futurs
+Cada vegada que facis canvis locals:
+
+Afegir canvis:
+bash
+Copia el codi
+git add .
+Fer commit:
+bash
+Copia el codi
+git commit -m "Descripció dels canvis"
+Pujar els canvis:
+bash
+Copia el codi
+git push
+8. Obtenir canvis de GitHub (Pull)
+Si altres han fet canvis, descarrega'ls:
+
+bash
+Copia el codi
+git pull origin master

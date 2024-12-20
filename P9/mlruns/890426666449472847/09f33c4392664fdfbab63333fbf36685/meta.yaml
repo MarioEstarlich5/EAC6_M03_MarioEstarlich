@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mario/OneDrive/Escritorio/EAC6_M03_MarioEstarlich/P9/mlruns/890426666449472847/09f33c4392664fdfbab63333fbf36685/artifacts
+end_time: 1734726742771
+entry_point_name: ''
+experiment_id: '890426666449472847'
+lifecycle_stage: active
+run_id: 09f33c4392664fdfbab63333fbf36685
+run_name: loud-whale-265
+run_uuid: 09f33c4392664fdfbab63333fbf36685
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734726742715
+status: 3
+tags: []
+user_id: mario

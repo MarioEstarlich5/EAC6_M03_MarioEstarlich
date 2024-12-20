@@ -1,0 +1,35 @@
+## Per què serveix guardar els models?
+Guardar els models entrenats, és important perquè permet reutilitzar-los en futures ocacions sense haver de tornar a entrenar-los. Ja que entrenar un model pot ser costós en temps i recursos, especialment si treballem amb datasets grans. 
+Tenir el model desat facilita: la Eficiència, la Reproductibilitat i la Portabilitat.
+
+---
+
+## Per què és necessària una llibreria com pickle?
+La llibreria `pickle` és útil perquè permet serialitzar objectes Python, com el model KMeans, i guardar-los en un fitxer. Això ens permet utilitzarlos fàcilment en el futur.
+
+---
+
+## Com s'ha fet l'associació entre els tipus de ciclistes i les classes del model?
+El model KMeans divideix els ciclistes en 4 clústers segons els seus temps de pujada (`t_pujada`) i baixada (`t_baixada`). Per associar aquests clústers (etiquetats com 0, 1, 2 i 3) amb els tipus de ciclistes (`BEBB`, `BEMB`, `MEBB`, `MEMB`), s'han seguit els següents passos:
+
+1. **Càlcul dels centres dels clústers**:
+   - Després d'entrenar el model, s'obtenen els centres dels clústers, que representen la mitjana dels valors de cada clúster.
+
+2. **Ordenació segons els valors dels centres**:
+   - Els clústers es van ordenar segons la suma dels seus valors de pujada (`t_pujada`) i baixada (`t_baixada`).
+   - Es van assignar els següents patrons:
+     - `BEBB` (bons escaladors, bons baixadors): Menor suma de temps.
+     - `MEMB` (mals escaladors, mals baixadors): Major suma de temps.
+     - `BEMB` i `MEBB`: Assignats segons els valors relatius de `t_pujada` i `t_baixada`.
+
+3. **Assignació final**:
+   - Es van assignar els labels del model (0, 1, 2, 3) als patrons segons els seus centres. Aquest procés garanteix que cada label representa correctament un tipus de ciclista.
+
+L'associació resultant es va guardar en un fitxer `tipus_dict.pkl` amb el següent format:
+```python
+[
+    {'name': 'BEBB', 'label': 0},
+    {'name': 'BEMB', 'label': 1},
+    {'name': 'MEBB', 'label': 2},
+    {'name': 'MEMB', 'label': 3}
+]

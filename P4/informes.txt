@@ -1,0 +1,17 @@
+# Explicació sobre els informes generats
+
+## Què contenen els fitxers d'informes?
+A la carpeta `informes/` s'han generat 4 fitxers, un per a cada clúster trobat pel model KMeans. Aquests fitxers estan organitzats de la següent manera:
+
+1. **Nom dels fitxers**:
+   - `BEBB.txt`: Conté la llista de ciclistes assignats al clúster que representa els **bons escaladors i bons baixadors**.
+   - `BEMB.txt`: Conté la llista de ciclistes assignats al clúster que representa els **bons escaladors i mals baixadors**.
+   - `MEBB.txt`: Conté la llista de ciclistes assignats al clúster que representa els **mals escaladors i bons baixadors**.
+   - `MEMB.txt`: Conté la llista de ciclistes assignats al clúster que representa els **mals escaladors i mals baixadors**.
+
+2. **Contingut de cada fitxer**:
+   Cada fitxer conté la informació detallada dels ciclistes que pertanyen al clúster corresponent. Les columnes que es mostren són:
+   - `id`: Identificador únic del ciclista.
+   - `t_pujada`: Temps de pujada en segons.
+   - `t_baixada`: Temps de baixada en segons.
+   - `t_total`: Temps total (pujada + baixada) en segons.

@@ -1,0 +1,26 @@
+# Informació sobre l'entorn d'execució
+
+Entorn d'execució: Local  
+Sistema operatiu: Windows 10  
+Versió de Python: 3.10.4  
+Editor/IDE utilitzat: Visual Studio Code  
+Llibreries utilitzades:
+    - numpy (versió 1.26.4)
+    - pandas (versió 2.2.2)
+    - logging (integrada a Python)
+    
+Ruta del projecte:
+    - La carpeta principal del projecte es troba a: EAC6_M03_MarioEstarlich/P1.  
+    - Dins d’aquesta carpeta, s’ha generat automàticament una subcarpeta anomenada `data` que conté el fitxer `ciclistes.csv`.
+
+Prova realitzada:
+- L’script ha generat correctament el fitxer `ciclistes.csv` a la carpeta `data`.
+- El dataset conté 100 files amb les següents columnes:
+    - `id`: Identificador únic per a cada ciclista.
+    - `category`: Categoria assignada aleatòriament.
+    - `t_pujada`: Temps de pujada (en segons).
+    - `t_baixada`: Temps de baixada (en segons).
+    - `t_total`: Temps total (suma de pujada i baixada).
+
+Exemple del primer registre del fitxer `ciclistes.csv`:
+1,MEBB,4404,1248,5652

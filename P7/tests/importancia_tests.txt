@@ -1,0 +1,19 @@
+# Importància dels tests unitaris
+
+Els tests unitaris són essencials en el desenvolupament de programari perquè:
+
+1. **Garantia de funcionalitat**:
+   Els tests unitaris asseguren que les funcions del codi compleixin amb les especificacions i generin els resultats esperats.
+
+2. **Detecció d'errors primerenca**:
+   Els errors es poden identificar ràpidament durant el desenvolupament, abans que es facin integracions més grans o desplegaments.
+
+3. **Facilitat de manteniment**:
+   Quan es realitzen canvis al codi, els tests unitaris ajuden a verificar que els canvis no introdueixin regressions o errors en altres parts del sistema.
+
+4. **Documentació i claredat**:
+   Els tests serveixen com a documentació del comportament esperat de les funcions, ajudant els desenvolupadors a entendre com ha de funcionar el codi.
+
+5. **Millora de la confiança en el codi**:
+   Saber que el codi està ben testejat augmenta la confiança en la seva qualitat i estabilitat.
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module clustersciclistes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>clustersciclistes</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmario%5Conedrive%5Cescritorio%5Ceac6_m03_marioestarlich%5Cp2%5Cclustersciclistes.py">c:\users\mario\onedrive\escritorio\eac6_m03_marioestarlich\p2\clustersciclistes.py</a></font></td></tr></table>
+    <p><tt>Anàlisi&nbsp;i&nbsp;clustering&nbsp;dels&nbsp;ciclistes&nbsp;utilitzant&nbsp;KMeans.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="seaborn.html">seaborn</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-associar_clusters_patrons"><strong>associar_clusters_patrons</strong></a>(model, patterns)</dt><dd><tt>Associa&nbsp;els&nbsp;clústers&nbsp;als&nbsp;patrons&nbsp;de&nbsp;comportament.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;(KMeans):&nbsp;Model&nbsp;entrenat.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;patterns&nbsp;(list):&nbsp;Llista&nbsp;de&nbsp;patrons.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Patrons&nbsp;amb&nbsp;els&nbsp;labels&nbsp;assignats.</tt></dd></dl>
+ <dl><dt><a name="-clean_data"><strong>clean_data</strong></a>(dataframe)</dt><dd><tt>Elimina&nbsp;les&nbsp;columnes&nbsp;no&nbsp;necessàries.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pd.DataFrame):&nbsp;Dataset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pd.DataFrame:&nbsp;Dataset&nbsp;netejat.</tt></dd></dl>
+ <dl><dt><a name="-clustering_kmeans"><strong>clustering_kmeans</strong></a>(data, n_clusters=4)</dt><dd><tt>Aplica&nbsp;el&nbsp;model&nbsp;de&nbsp;clustering&nbsp;KMeans.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(np.ndarray):&nbsp;Atributs&nbsp;(t_pujada,&nbsp;t_baixada).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;n_clusters&nbsp;(int):&nbsp;Nombre&nbsp;de&nbsp;clústers.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;KMeans:&nbsp;Model&nbsp;entrenat.</tt></dd></dl>
+ <dl><dt><a name="-exploratory_data_analysis"><strong>exploratory_data_analysis</strong></a>(dataframe)</dt><dd><tt>Exploració&nbsp;inicial&nbsp;del&nbsp;dataset.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pd.DataFrame):&nbsp;Dataset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-extract_true_labels"><strong>extract_true_labels</strong></a>(dataframe)</dt><dd><tt>Extreu&nbsp;les&nbsp;etiquetes&nbsp;reals&nbsp;dels&nbsp;ciclistes.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pd.DataFrame):&nbsp;Dataset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;np.ndarray:&nbsp;Etiquetes&nbsp;reals&nbsp;(labels).</tt></dd></dl>
+ <dl><dt><a name="-load_dataset"><strong>load_dataset</strong></a>(path)</dt><dd><tt>Carrega&nbsp;el&nbsp;dataset&nbsp;de&nbsp;registres&nbsp;dels&nbsp;ciclistes.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;(str):&nbsp;Ruta&nbsp;al&nbsp;dataset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pd.DataFrame:&nbsp;Dataset&nbsp;carregat.</tt></dd></dl>
+ <dl><dt><a name="-visualitzar_clusters"><strong>visualitzar_clusters</strong></a>(data, labels)</dt><dd><tt>Genera&nbsp;un&nbsp;gràfic&nbsp;dels&nbsp;clústers.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;(np.ndarray):&nbsp;Dades.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;labels&nbsp;(np.ndarray):&nbsp;Etiquetes&nbsp;dels&nbsp;clústers.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-visualitzar_pairplot"><strong>visualitzar_pairplot</strong></a>(dataframe)</dt><dd><tt>Genera&nbsp;un&nbsp;pairplot&nbsp;per&nbsp;analitzar&nbsp;les&nbsp;relacions&nbsp;entre&nbsp;atributs.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataframe&nbsp;(pd.DataFrame):&nbsp;Dataset.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None</tt></dd></dl>
+</td></tr></table>
+</body></html>
